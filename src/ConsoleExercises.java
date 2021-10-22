@@ -18,7 +18,7 @@ public class ConsoleExercises {
 		// prompt the user to enter the first number/ word,
 		// then read it in; do the same for the
 		// second number/ word
-		System.out.format("The value of pi is approximately %-10.2f%n", pi);
+		System.out.format("The value of pi is approximately %.2f%n", pi);
 
 		System.out.println("Enter your first word: ");
 		word1 = keyboard.nextLine();
@@ -37,25 +37,25 @@ public class ConsoleExercises {
 		System.out.println("You entered: " + sentence);
 
 		System.out.println("Enter the length: ");
-		number1= keyboard.nextDouble();
+		number1 = keyboard.nextDouble();
 
 		System.out.println("Enter the width: ");
-		number2= keyboard.nextDouble();
+		number2 = keyboard.nextDouble();
 
 		System.out.println("Enter the height: ");
-		number3= keyboard.nextDouble();
+		number3 = keyboard.nextDouble();
 
 		perimeter = number1*2 + number2*2;
 
-		System.out.format("\nThe perimeter of the room is %-10.2f%n ft\n", perimeter);
+		System.out.format("\nThe perimeter of the room is \n%.2f ft", perimeter);
 
 		area = number1 * number2;
 
-		System.out.format("\nThe area of the room is %-10.2f%n square feet\n", area);
+		System.out.format("\nThe area of the room is \n%.2f square feet", area);
 
 		volume = area * number3;
 
-		System.out.format("\nThe volume of the room is %-10.2f%n square feet\n", volume);
+		System.out.format("\nThe volume of the room is \n%.2f square feet", volume);
 
 
 
