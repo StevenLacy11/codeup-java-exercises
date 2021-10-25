@@ -36,13 +36,13 @@ public class ControlFlowExercises {
 //		 in from the keyboard
 
 
-        String choice = "y", message;
+        String answer = "y", message;
 		int a;
 		long startValue, squared, cubed;
 
 		Scanner keyboard1 = new Scanner(System.in);
 
-        while (choice.equals("y")) {
+        while (answer.equals("y")) {
 
             // gets the input from the user
             System.out.println("What number would you like to go up to?");
@@ -54,18 +54,16 @@ public class ControlFlowExercises {
             for (a = 1; a <= startValue; a++) {
                 squared = (long) Math.pow(a, 2);
                 cubed = (long) Math.pow(a, 3);
-
                  message = "\n" + a + "      | " + squared + "      |  " + cubed;
-
                 System.out.print(message);
             }
 
 			//// sees if the user wants to continue
             System.out.print("\nContinue? (y/n): ");
-            choice = keyboard1.next();
+            answer = keyboard1.next();
             System.out.println();
 
-            if (choice.equals("n")) {
+            if (answer.equals("n")) {
 				System.out.println("\nThis program was written by Steven Lacy.");
 				System.out.println("End of program.");
             }
@@ -76,11 +74,11 @@ public class ControlFlowExercises {
 		Scanner keyboard2 = new Scanner(System.in);
 
 		System.out.print("Next one? (y/n): ");
-		choice = keyboard2.next();
+		answer = keyboard2.next();
 
-		boolean confirmation = choice.equals("y");
+		boolean confirm = answer.equals("y");
 
-		if (confirmation) {
+		if (confirm) {
 			System.out.print("Input a numerical grade from 0 to 100\n");
 			userGrade = keyboard2.nextLong();
 
