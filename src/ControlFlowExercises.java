@@ -4,12 +4,12 @@ public class ControlFlowExercises {
 	public static void main(String[] args) {
 
 
-		int z = 5;
-
-		while (z <= 15){
-			System.out.println(z);
-			z++;
-		}
+//		int z = 5;
+//
+//		while (z <= 15){
+//			System.out.print(z + " ");
+//			z++;
+//		}
 
 
 		for(int i = 100; i >= -10; i -= 5)
