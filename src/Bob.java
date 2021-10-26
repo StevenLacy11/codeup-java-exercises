@@ -101,5 +101,5 @@ public class Bob {
 		System.out.println("\nThis program was written by Steven Lacy");
 		System.out.println("End of program.");
 
-	}
-}
+	} // end Main method
+} // end class Bob
