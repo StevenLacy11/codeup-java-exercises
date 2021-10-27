@@ -1,95 +1,105 @@
 import java.util.Scanner;
 
 public class MethodsExercises {
-	public static void main(String[] args) {
-//        calculateCall();
-//        getInteger();
-		System.out.println(factorial(5));
-	}
 
-
-	public static void calculateCall() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Would you like to add, subtract, multiply, or divide?");
-		String input = scanner.next();
-		System.out.println("Input two numbers e.g. x x ");
-		float num1 = scanner.nextFloat();
-		float num2 = scanner.nextFloat();
-		calculate(num1, num2, input);
-
-	}
-
-
-	public static void calculate(float num1, float num2, String input) {
-		switch (input) {
-			case "add":
-				System.out.println("Sum: " + add(num1, num2));
-				break;
-			case "subtract":
-				System.out.println("Difference: " + subtract(num1, num2));
-				break;
-			case "multiply":
-				System.out.println("Product: " + multiply(num1, num2));
-				break;
-			case "divide":
-				System.out.println("Dividend: " + divide(num1, num2));
-				break;
-			default:
-				System.out.println("idk how we got here, fam");
-				break;
-		}
-	}
-
-//        "Sum: " + add(num1, num2)
-
-
-	public static float add(float num1, float num2) {
+	public static int addition(int num1, int num2) {
 		return num1 + num2;
 	}
 
-	public static float subtract(float num1, float num2) {
+	public static int subtraction(int num1, int num2) {
 		return num1 - num2;
 	}
 
-	public static float multiply(float num1, float num2) {
+	public static int multiplication(int num1, int num2) {
 		return num1 * num2;
 	}
 
-	public static float divide(float num1, float num2) {
+	public static float division(float num1, float num2) {
 		return num1 / num2;
 	}
 
-// method overloading
-//    public static float add(int num1, int num2, int num3) {
-//    return num1 + num2 + num3;
-//    }
-//    public static int add(double num1, double numberBad, double iguess){
-//        return (int) (num1 + numberBad + iguess);
-//    }
-
-
-	public static void getInteger() {
-		Scanner scanner = new Scanner(System.in);
-		int userNum = scanner.nextInt();
-		int min = 1;
-		int max = 10;
-		boolean goodNum;
-		goodNum = (min > userNum) && (userNum > max);
-		if(goodNum)
-			System.out.println("Thanks");
+	public static int remainder(int num1, int num2) {
+		return num1 % num2;
 	}
 
-
-
-	public static long factorial(int userNum){
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter an integer between 1 and 10");
-		userNum = scanner.nextInt();
-		long result = 1;
-		for(int i = 1; i <= userNum; i++) {
-			result *= i;
+	public static int getInteger(int min, int max) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number between 1 and 10:");
+		int userNumber = sc.nextInt();
+		if(userNumber <= max && userNumber >= min) {
+			return userNumber;
+		} else {
+			return getInteger(min, max);
 		}
-		System.out.println("Here is the factorial of your number ");
-		return result;
 	}
+
+
+
+
+
+	public static long factoral(int n) {
+		long num = 1;
+		for(int i = 2; i <= n; i++) {
+			num = num * i;
+		}
+		return num;
+	}
+
+	public static void userInputFactoral() {
+		Scanner scanner = new Scanner(System.in);
+		boolean confirm;
+		do{
+			System.out.println(factoral(getInteger(1, 10)));
+			System.out.println("Continue? [y/n]");
+			String userConfirm = scanner.nextLine();
+			confirm = userConfirm.equalsIgnoreCase("y");
+		} while(confirm);
+
+	}
+
+
+	public static int randomInt(int Min, int Max)
+	{
+		return (int) (Math.random()*(Max-Min))+Min;
+	}
+
+
+
+	public static void diceRoll() {
+		Scanner scanner = new Scanner(System.in);
+		boolean confirm;
+		do{
+			System.out.println("How many sided dice do you want to roll?");
+			int res = scanner.nextInt();
+			if(res == 6) {
+				int random = randomInt(2, 12);
+				System.out.println("You rolled a " + random);
+			} else if(res == 8) {
+				int random = randomInt(2, 16);
+				System.out.println("You rolled a " + random);
+			} else if(res == 10) {
+				int random = randomInt(2, 30);
+				System.out.println("You rolled a " + random);
+			} else {
+				System.out.println("I dont have that many sided dice!");
+			}
+			System.out.println("Roll again? [y/n]");
+			String response = scanner.next();
+			confirm = response.equalsIgnoreCase("y");
+		}while(confirm);
+
+	}
+
+	public static void main(String[] args) {
+
+		diceRoll();
+//        userInputFactoral();
+//        System.out.println(addition(4, 5));
+//        System.out.println(subtraction(9, 5));
+//        System.out.println(multiplication(3, 5));
+//        System.out.println(division(10, 3));
+//        System.out.println(remainder(8, 3));
+
+	}
+
 }
