@@ -32,8 +32,7 @@ public class Bob {
 		// user wants to exit the program
 		// for your condition use the expression
 		// (done not equal to true)
-		while (!done)
-		{
+		while (!done) {
 			// print out menu for the user
 			// to select from
 			System.out.println("\nPlease select what to do with Bob" + "\n");
@@ -54,28 +53,23 @@ public class Bob {
 			{
 				System.out.println(response1);
 				invalidChoice = false;
-			}
-			else if (selection == 2) //yell at bob
+			} else if (selection == 2) //yell at bob
 			{
 				System.out.println(response2);
 				invalidChoice = false;
-			}
-			else if (selection == 3) //say nothing
+			} else if (selection == 3) //say nothing
 			{
 				System.out.println(response3);
 				invalidChoice = false;
-			}
-			else if (selection == 4)//anything else
+			} else if (selection == 4)//anything else
 			{
 				System.out.println(response4);
 				invalidChoice = false;
-			}
-			else if (selection == 5) //exit program
+			} else if (selection == 5) //exit program
 			{
 				done = true;
 				invalidChoice = false;
-			}
-			else 	//invalid choice
+			} else    //invalid choice
 			{
 				invalidChoice = true;
 				System.out.println("\n***ERROR*** " +
@@ -87,16 +81,12 @@ public class Bob {
 			// using nested if statements, determine
 			// the type of output to produce
 
-			if (!invalidChoice)
-			{
+			if (!invalidChoice) {
 				System.out.println();
-			}
-
-				else
-			{
+			} else {
 				System.out.println("\nNo response.");
 			}
-		} 	//end wile loop
+		}    //end while loop
 
 		System.out.println("\nThis program was written by Steven Lacy");
 		System.out.println("End of program.");
