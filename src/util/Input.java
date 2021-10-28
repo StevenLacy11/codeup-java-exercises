@@ -1,14 +1,16 @@
 package util;
+
 import java.util.Scanner;
 
 public class Input {
-	private Scanner keyboard;
+	private final Scanner keyboard;
 
 	public Input() {
 		this.keyboard = new Scanner(System.in);
 	}
-	public String getString(String input){
-		System.out.println("Please enter a sentence:");
+
+	public String getString(String input) {
+		System.out.println("Please enter a sentence: ");
 		return keyboard.nextLine();
 	}
 
@@ -20,36 +22,10 @@ public class Input {
 		return result;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	public int getInt() {
+		System.out.println("Enter an integer: ");
+		return keyboard.nextInt();
+	}
 
 
 }
