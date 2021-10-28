@@ -24,35 +24,36 @@ public class Input {
 	}
 
 	public int getInt(int min, int max) {
-        String prompt = "Enter an integer between " + min + " and " + max;
-        System.out.println("Enter an integer between " + min + " and " + max);
-        int userInput = keyboard.nextInt();
-        while (userInput <= min || userInput >= max) {
-            System.out.println("Enter an integer between " + min + " and " + max);
-            userInput = keyboard.nextInt();
-        }
-        return userInput;
-    }
+		String prompt = "Enter an integer between " + min + " and " + max;
+		System.out.println("Enter an integer between " + min + " and " + max);
+		int userInput = keyboard.nextInt();
+		while (userInput <= min || userInput >= max) {
+			System.out.println("Enter an integer between " + min + " and " + max);
+			userInput = keyboard.nextInt();
+		}
+		return userInput;
+	}
 
-	public double getDouble(){
-        System.out.println("Enter a number:");
+	public double getDouble() {
+		System.out.println("Enter a number:");
 		return keyboard.nextDouble();
-    }
+	}
 
-	public double getDouble(String prompt){
-        System.out.println(prompt);
+	public double getDouble(String prompt) {
+		System.out.println(prompt);
 		return keyboard.nextDouble();
-    }
-    public double getDouble(double min, double max) {
-        String prompt = "Enter an integer between " + min + " and " + max;
-        System.out.println("Enter an integer between " + min + " and " + max);
-        double userInput = keyboard.nextDouble();
-        while (userInput <= min || userInput >= max) {
-            System.out.println("Enter andinteger between " + min + " and " + max);
-            userInput = keyboard.nextDouble();
-        }
-        return userInput;
-    }
+	}
+
+	public double getDouble(double min, double max) {
+		String prompt = "Enter an integer between " + min + " and " + max;
+		System.out.println("Enter an integer between " + min + " and " + max);
+		double userInput = keyboard.nextDouble();
+		while (userInput <= min || userInput >= max) {
+			System.out.println("Enter andinteger between " + min + " and " + max);
+			userInput = keyboard.nextDouble();
+		}
+		return userInput;
+	}
 
 
 }
