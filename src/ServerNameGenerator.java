@@ -8,16 +8,15 @@ public class ServerNameGenerator {
 	public static void randomServerName() {
 
 		Random rand = new Random();
-		int answer = rand.nextInt(10);
+		int answer = rand.nextInt(9);
 		Random rand2 = new Random();
-		int answer2 = rand.nextInt(10);
+		int answer2 = rand.nextInt(9);
 		System.out.println("Here is your server name:\n" + adjectives[answer] + "-" + nouns[answer2]);
 	}
 
 	public static void main(String[] args) {
 		randomServerName();
 	}
-
 }
 
 
