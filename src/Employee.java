@@ -6,14 +6,17 @@ public class Employee extends Person {
 	}
 
 	public int getAge() {
+
 		return this.age;
 	}
 
 	public void sayHello(){
+
 		System.out.println("Welcome to MegaCorp - how may I help you?");
 	}
 
 	public void doWork(){
+
 		System.out.println("Work, Work, Work");
 	}
 
