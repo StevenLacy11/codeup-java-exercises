@@ -45,23 +45,13 @@ public class MoviesApplication {
 
 	}
 
-//    static void  displayMenu(){
-//        String menu = "What would you like to do? \n\n" +
-//                "0 - exit\n" +
-//                "1 - view all movies\n" +
-//                "2 - view movies in the animated category\n" +
-//                "3 - view movies in the drama category\n" +
-//                "4 - view movies in the horror category\n" +
-//                "5 - view movies in the sci-fi category\n";
-//    }
-
 	public static String getCategory(String category) {
-		String result = "";
+		StringBuilder result = new StringBuilder();
 		for (Movie movie : MoviesArray.findAll()) {
 			if (movie.getCategory().equalsIgnoreCase(category)) {
-				result += movie.getName() + " | " + movie.getCategory() + "\n";
+				result.append(movie.getName()).append(" | ").append(movie.getCategory()).append("\n");
 			}
 		}
-		return result;
+		return result.toString();
 	}
 }
