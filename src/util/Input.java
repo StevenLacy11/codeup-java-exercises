@@ -6,16 +6,15 @@ public class Input {
 	private final Scanner keyboard = new Scanner(System.in);
 
 	public String getString() {
-		System.out.println("Please enter a sentence: ");
+		System.out.println();
 		return keyboard.nextLine();
 	}
 
 	public boolean yesNo() {
 		System.out.println("Enter yes or no");
 		String yesNo = keyboard.nextLine();
-		boolean result = yesNo.equalsIgnoreCase("yes");
-		System.out.println("Your boolean is " + result);
-		return result;
+		//		System.out.println("Your boolean is " + result);
+		return yesNo.equalsIgnoreCase("yes") || yesNo.equalsIgnoreCase("y");
 	}
 
 	public int getInt() {
