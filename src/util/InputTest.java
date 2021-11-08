@@ -8,9 +8,11 @@ public class InputTest {
 		String myString = input.getString();
 		System.out.println("myString = " + myString);
 
-//		System.out.println("Do you like pizza?");
-//		boolean likePizza = input.yesNo();
-//		System.out.println("likePizza = " + likePizza);
+		System.out.println("Do you like pizza?");
+		boolean likePizza = input.yesNo();
+		System.out.println("likePizza = " + likePizza);
+
+		input.getString();
 
 		System.out.println("Please enter a whole number.");
 		int myInt = input.getInt();
